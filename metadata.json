@@ -1,0 +1,8 @@
+{
+  "name": "Aiteebar AI Security Scanner",
+  "description": "Enterprise cybersecurity platform for AI application discovery, MCP configuration inspection, risk assessment, and endpoint activity monitoring.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
