@@ -1,9 +1,12 @@
 import os
+from dotenv import load_dotenv
 
 from app.database import SessionLocal
 from app.models.registry import ApplicationRegistry
 from app.models.user import User
 from app.security.password import hash_password
+
+load_dotenv()
 
 
 DEFAULT_APPS = [

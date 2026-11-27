@@ -22,7 +22,7 @@ def _enroll_test_device(client: TestClient, headers: dict[str, str]) -> str:
 def test_scan_submission_idempotency_and_redaction(
     client: TestClient, admin_user
 ) -> None:
-    headers = get_auth_headers(client, "admin@test.local", "StrongAdminPass123!")
+    headers = get_auth_headers(client, "admin@example.com", "StrongAdminPass123!")
     dev_token = _enroll_test_device(client, headers)
 
     payload = {
@@ -111,7 +111,7 @@ def test_scan_submission_idempotency_and_redaction(
 def test_invalid_scan_payload_and_device_mismatch(
     client: TestClient, admin_user
 ) -> None:
-    headers = get_auth_headers(client, "admin@test.local", "StrongAdminPass123!")
+    headers = get_auth_headers(client, "admin@example.com", "StrongAdminPass123!")
     dev_token = _enroll_test_device(client, headers)
 
     # Device ID mismatch

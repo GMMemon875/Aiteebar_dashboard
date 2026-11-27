@@ -6,7 +6,7 @@ from tests.conftest import get_auth_headers
 def test_dashboard_summary_security_status_and_registry(
     client: TestClient, admin_user
 ) -> None:
-    headers = get_auth_headers(client, "admin@test.local", "StrongAdminPass123!")
+    headers = get_auth_headers(client, "admin@example.com", "StrongAdminPass123!")
 
     # Enroll device & upload scan with 1 HIGH risk
     enr_tok = client.post(

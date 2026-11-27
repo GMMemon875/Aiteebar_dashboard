@@ -4,7 +4,7 @@ from tests.conftest import get_auth_headers
 
 
 def test_device_enrollment_and_single_use_token(client: TestClient, admin_user) -> None:
-    headers = get_auth_headers(client, "admin@test.local", "StrongAdminPass123!")
+    headers = get_auth_headers(client, "admin@example.com", "StrongAdminPass123!")
 
     tok_res = client.post(
         "/api/v1/devices/enrollment-tokens",
@@ -50,7 +50,7 @@ def test_device_enrollment_and_single_use_token(client: TestClient, admin_user) 
 
 
 def test_revoked_device_token_is_rejected(client: TestClient, admin_user) -> None:
-    headers = get_auth_headers(client, "admin@test.local", "StrongAdminPass123!")
+    headers = get_auth_headers(client, "admin@example.com", "StrongAdminPass123!")
     enr_tok = client.post(
         "/api/v1/devices/enrollment-tokens", headers=headers, json={"note": ""}
     ).json()["enrollment_token"]

@@ -121,7 +121,7 @@ def enroll_device(
     *,
     device_id: str | None = None,
     device_name: str | None = None,
-    scanner_version: str = "1.4.2",
+    scanner_version: str = "0.3",
 ) -> dict[str, str]:
     dev_id = device_id or load_device_id_default()
     dev_name = device_name or socket.gethostname()

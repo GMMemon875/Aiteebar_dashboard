@@ -64,7 +64,7 @@ def client(db_session: Session) -> Generator[TestClient, None, None]:
 def admin_user(db_session: Session) -> User:
     u = User(
         name="Test Admin",
-        email="admin@test.local",
+        email="admin@example.com",
         password_hash=hash_password("StrongAdminPass123!"),
         role="admin",
         is_active=True,
@@ -79,7 +79,7 @@ def admin_user(db_session: Session) -> User:
 def viewer_user(db_session: Session) -> User:
     u = User(
         name="Test Viewer",
-        email="viewer@test.local",
+        email="viewer@example.com",
         password_hash=hash_password("StrongViewerPass123!"),
         role="viewer",
         is_active=True,

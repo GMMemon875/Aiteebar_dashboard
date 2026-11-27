@@ -6,3 +6,15 @@ coverage/
 *.log
 .env*
 !.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Local credentials and data
+.aiteebar_device_creds.json
+scan_report.json
+pending_queue/
